@@ -1,0 +1,22 @@
+{
+  "name": "sockets_chat",
+  "version": "1.0.0",
+  "description": "my first chat system using sockets.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giusepped/sockets_chat.git"
+  },
+  "author": "giusepped",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giusepped/sockets_chat/issues"
+  },
+  "homepage": "https://github.com/giusepped/sockets_chat#readme",
+  "dependencies": {
+    "express": "^4.10.2"
+  }
+}
