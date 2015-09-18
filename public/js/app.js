@@ -1,14 +1,25 @@
 $(document).ready(function(){
+  $('.chat').hide();
+  $('#name').focus();
 
-  var socket = io();
+  $('.enter-chat').click(function() {
+    var name = $('#name').val();
+    $('.chat').show();
+    $('.username').hide();
+    $('#m').focus();
 
-  $('form').submit(function(){
-    socket.emit('chat message', $('#m').val());
-    $('#m').val('');
-    return false;
-  });
+    var socket = io();
+    socket.emit('new_user', name);
 
-  socket.on('chat message', function(msg){
-    $('#messages').append($('<li>').text(msg));
+    $('form').submit(function(){
+      socket.emit('chat message', $('#m').val());
+      $('#m').val('').focus();
+      return false;
+    });
+
+    socket.on('chat message', function(msg){
+      $('#messages').append($('<li>').text(msg));
+    });
   });
 });
+

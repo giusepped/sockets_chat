@@ -8,9 +8,19 @@
     <script src="js/app.js"></script>
   </head>
   <body>
-    <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
-    </form>
+    <div class="username">
+      <h2>Socket.io Chat</h2>
+      <br />
+      Name: <input id="name"/>
+      <br />
+      <br />
+      <input class="enter-chat" type="submit" value="Enter chat" />
+    </div>
+    <div class="chat">
+      <ul id="messages"></ul>
+      <form action="">
+        <input id="m" autocomplete="off" /><button>Send</button>
+      </form>
+    </div>
   </body>
 </html>
